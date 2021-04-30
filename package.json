@@ -1,10 +1,10 @@
 {
-  "name": "electron-is-running-in-asar",
+  "name": "electron-is-running-in-asar2",
   "version": "1.0.0",
   "description": "Check if the application is running from inside an asar package",
   "license": "MIT",
-  "repository": "balena-io-modules/electron-is-running-in-asar",
-  "author": "Balena Inc. <hello@balena.io>",
+  "repository": "https://github.com/RyoHina/electron-is-running-in-asar2",
+  "author": "ryohina",
   "keywords": [
     "electron",
     "asar",
