@@ -1,6 +1,6 @@
 {
   "name": "electron-is-running-in-asar2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Check if the application is running from inside an asar package",
   "license": "MIT",
   "repository": "https://github.com/RyoHina/electron-is-running-in-asar2",
