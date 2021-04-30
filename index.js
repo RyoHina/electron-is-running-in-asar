@@ -25,5 +25,19 @@
 'use strict';
 
 module.exports = function() {
-	return process.mainModule.filename.indexOf('app.asar') !== -1;
+	// return process.mainModule.filename.indexOf('app.asar') !== -1;
+	try {
+            const test_file = path.join(app.getAppPath(), Date.now() + ".temp.txt")
+            // if in asar package, this line will throw exception
+            fs.writeFileSync(test_file, "")
+            if (fs.existsSync(test_file)) {
+                fs.unlinkSync(test_file)
+            }
+            return false
+        } catch (e) {
+            if (e.errno === -2 && e.message.includes('not found in') && e.message.includes('app.asar')) {
+                return true
+            }
+        }
+        return false
 };
