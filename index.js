@@ -23,9 +23,12 @@
  */
 
 'use strict';
+import {app} from 'electron'
 
 module.exports = function() {
+	// It's wrong sometimes.
 	// return process.mainModule.filename.indexOf('app.asar') !== -1;
+	
 	try {
             const test_file = path.join(app.getAppPath(), Date.now() + ".temp.txt")
             // if in asar package, this line will throw exception
